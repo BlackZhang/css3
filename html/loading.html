@@ -3,25 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>无标题文档</title>
-<style>
-.box { position:relative; margin-top:300px;}
-.load { width:5px; height:5px; background:blue; position:absolute; left:0; opacity:0; -webkit-animation:load 2s; -webkit-animation-iteration-count:infinite; -webkit-animation-timing-function: cubic-bezier(0.1, 0.48, 0.9, 0.52);}
-.load[index= "0"] { -webkit-animation-delay:0.1s; background:red;}
-.load[index= "1"] { -webkit-animation-delay:0.2s; background:blue;}
-.load[index= "2"] { -webkit-animation-delay:0.3s; background:yellow;}
-.load[index= "3"] { -webkit-animation-delay:0.4s; background:green;}
-.load[index= "4"] { -webkit-animation-delay:0.5s; background:purple;}
-.load[index= "5"] { -webkit-animation-delay:0.6s; background:pink;}
-.load[index= "6"] { -webkit-animation-delay:0.7s; background:orange;}
-
-@-webkit-keyframes load {
-	0% { opacity:0; left:0;}
-	5% { opacity:1;}
-	95% { opacity:1;}
-	100% { opacity:0; left:100%;}
-}
-
-</style>
+<link rel="stylesheet" href="../css/loading.css" />
 </head>
 
 <body>

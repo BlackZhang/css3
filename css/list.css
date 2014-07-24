@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document WriterLguoqun.zhang Date:2014.7.24 */
+body,ul,li { margin:0; padding:0;}
+li { list-style:none;}
+
+.box { width:600px; margin:10px auto 0; counter-reset:item;}
+.box li:nth-child(1) { background:#3ed4e5;}
+.box li:nth-child(2) { background:#00a2d0;}
+.box li:nth-child(3) { background:#51b048;}
+.box li:nth-child(4) { background:#00a2d0;}
+.box li:nth-child(5) { background:#9d9938;}
+
+.box li:hover { background:#f57838;}
+
+.box li:nth-child(1):before { background:#3ed4e5;}
+.box li:nth-child(2):before { background:#00a2d0;}
+.box li:nth-child(3):before { background:#51b048;}
+.box li:nth-child(4):before { background:#00a2d0;}
+.box li:nth-child(5):before { background:#9d9938;}
+.item { width:600px; height:40px; line-height:40px; border-radius:5px; position:relative; cursor:pointer; margin-bottom:10px; -webkit-transition:all .3s ease-in;}
+.item a { display:inline-block; margin-left:30px; color:#fff; text-decoration:none; font-family:Consolas; text-shadow:1px 1px 0 #333;}
+
+.item:before { display:inline-block; width:32px; height:32px; line-height:32px; text-align:center; font-family:Consolas; color:#333; border:4px solid #fff; border-radius:100%; content:counter(item); position:absolute; left:-20px; top:0; counter-increment:item; -webkit-transition:all .3s ease-in;}
+.item:hover:before { -webkit-transform:rotate(360deg);}
+/* 
+使用说明：
+	1.使用transition属性（注：当鼠标移入的时候运动运行完毕，动画会停留在最终显示效果，鼠标离开时在渐变会初始的状态；而animation却不会这样，当运行到最后，鼠标没有动的情况下animation会返回到最初的效果；）
+	2.-webkit-transition-property设置要变化的属性多个属性使用‘，’隔开，也可以是使用all表示全部；
+	3.-webkit-transition-delay动画开始前的延时时间；
+	4.-webkit-transition-duration动画持续的时间；
+	5.-webkit-transition-timing-function设置运动曲线；
+	使用时在要变化的元素class内添加以上属性；在class:hover里面添加变化后的属性值，如width、height、color等；
+ */ 
