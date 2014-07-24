@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body,ul,li { margin:0; padding:0;}
+li { list-style:none;}
+
+.clock { width:210px; margin:20px auto 0; position:relative; }
+.pointer { width:200px; height:200px; position:relative; border-radius:100%; border:5px solid #333; box-shadow:1px 1px 10px rgba(0,0,0,0.4),5px 0 100px rgba(0,0,0,0.2) inset;}
+.pointer li { position:absolute; left:100px; top:0; width:2px; height:2px; background:#000; border-radius:100%; -webkit-transform-origin:0 100px;}
+.pointer li:nth-child(5n+1) { height:8px; border-radius:0;}
+.hand { width:12px; height:12px; background:#000; border-radius:100%; position:absolute; left:100px; top:100px;}
+.hour { width:6px; height:35px; background:#000; position:absolute; left:3px; bottom:6px; -webkit-transform-origin:bottom;}
+.min { width:4px; height:65px; background:green; position:absolute; left:4px; bottom:6px; -webkit-transform-origin:bottom;}
+.sec { width:2px; height:85px; background:red; position:absolute; left:5px; bottom:6px; -webkit-transform-origin:bottom;}
+.center { width:12px; height:12px; background:#000; position:absolute; border-radius:100%; z-index:10;}
+</style>
+<script src="../js/fun.js"></script>
+<script>
+window.onload=function(){
+	var oPointer = fun.getByClass('pointer')[0];
+	var oHour = fun.getByClass('hour')[0];
+	var oMin = fun.getByClass('min')[0];
+	var oSec = fun.getByClass('sec')[0];
+	
+	toTime(oHour, oMin, oSec);
+	setInterval(function(){
+		toTime(oHour, oMin, oSec);
+	},1000);
+	
+	function toTime(oHour, oMin, oSec){
+		var oDate = new Date();
+		var iSec = oDate.getSeconds();
+		var iMin = oDate.getMinutes()+iSec/60;
+		var iHour = oDate.getHours()+iMin/60;
+		
+		oSec.style.WebkitTransform = 'rotate('+iSec*360/60+'deg)';
+		oMin.style.WebkitTransform = 'rotate('+iMin*360/60+'deg)';
+		oHour.style.WebkitTransform = 'rotate('+iHour*360/12+'deg)';
+		
+	}
+	
+	createPointer();
+	function createPointer(){
+		var html = '';
+		var iDeg = 6;
+		
+		for(var i=0; i<60; i++){
+			html += '<li style="-webkit-transform:rotate('+i*iDeg+'deg)"></li>';
+		}
+		
+		oPointer.innerHTML = html;
+	}
+}
+</script>
+</head>
+
+<body>
+<div class="clock">
+	<div class="hand">
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+        <div class="center"></div>
+    </div>
+	<ul class="pointer"></ul>
+</div>
+</body>
+</html>
