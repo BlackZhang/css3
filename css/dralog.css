@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document Writer:guoqun.zhang Date:2014.7.24 */
+html { height:100%;}
+body { margin:0; padding:0; background:#3b4d63;}
+
+h1 { color:rgba(29,48,65,0.6); font-size:60px; text-align:center; text-shadow:3px 3px 0 rgba(189,187,0,0.3); font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;}
+.push,.lamp,.onoff { position:absolute;}
+.push { left:0; top:0; width:450px; height:150px; cursor:move;}
+.pic { position:absolute; left:0; top:0; width:450px; height:150px; background:url(../image/logo.png) no-repeat; z-index:2;}
+.shadow { display:none; position:absolute; left:-40px; top:15px; width:450px; height:150px; background:url(../image/logo-shadow.png) no-repeat; z-index:1;}
+.lamp { cursor:move; left:1100px; top:50px; width:150px; height:150px; background:url(../image/lightbulb.png) no-repeat -150px 0; z-index:10;}
+.onoff { left:50px; bottom:50px; width:80px; height:120px; background:url(../image/light-switch.png) no-repeat -80px 0; cursor:pointer;}
+
