@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box { width: 600px; height: 300px; margin: 0 auto; }
+.button { display: block; width: 80px; height: 26px; text-align: center; line-height: 26px; font-size: 12px; font-family: "微软雅黑"; text-decoration: none; border-radius: 3px; position: relative; float: left; margin: 5px; }
+a.button:after, .button:before { content: ''; position: absolute; left: -1px; bottom: -1px; width: 80px; height: 26px; border-radius: 3px; }
+a.button:before { height: 23px; bottom: -4px; border-top: 0; border-radius: 0 0 3px 3px; -webkit-box-shadow: 0 1px 1px 0px #bfbfbf; }
+;
+.gray { color: #555; text-shadow: 0px 1px 0px #fafafa; border-bottom: 4px solid #afafaf; box-shadow:inset 1px 1px 0 #f5f5f5; background: -webkit-linear-gradient(top, #eee, #e2e2e2); }
+.gray:before, .gray:after { border: 1px solid #cbcbcb; border-bottom: 1px solid #a5a5a5; }
+a.gray:hover { background: -webkit-linear-gradient(bottom, #eee, #e2e2e2); }
+
+a.pink { color: #913944; border-bottom: 4px solid #cb5462; text-shadow: 0px 1px 0px #f9a0ad; background: -webkit-linear-gradient(top, #f997b0, #f56778); box-shadow: inset 1px 1px 0 #fbc1d0; }
+.pink:before, .pink:after { border: 1px solid #ee8090; border-bottom: 1px solid #b84d5a; }
+a.pink:hover { background: -webkit-linear-gradient(top, #f56778, #f997b0);}
+
+</style>
+</head>
+
+<body>
+<div class="box"> 
+    <a class="button gray" href="#">测试一下</a> 
+    <a class="button pink" href="#">测试一下</a> 
+</div>
+</body>
+</html>
