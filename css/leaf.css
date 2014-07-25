@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document Writer:guoqun.zhang Date:2014.7.25*/
+body { background:#ccc;}
+.wrap { width:500px; height:500px; margin:500px auto 0;}
+.box { width:500px; height:400px; position:relative;}
+.leaf { position:absolute; width:300px; height:300px; border-radius:300px 0; background:-webkit-linear-gradient(45deg,  rgba(188,190,192,1) 8%,rgba(158,31,99,1) 30%,rgba(158,31,99,1) 100%); opacity:0.5; transform:rotate(135deg); transform-origin:top right;}
+
+@-webkit-keyframes show1 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(63deg);}
+}
+@-webkit-keyframes show2 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(81deg);}
+}
+@-webkit-keyframes show3 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(99deg);}
+}
+@-webkit-keyframes show4 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(117deg);}
+}
+@-webkit-keyframes show6 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(153deg);}
+}
+@-webkit-keyframes show7 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(171deg);}
+}
+@-webkit-keyframes show8 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(189deg);}
+}
+@-webkit-keyframes show9 {
+	0% { transform:rotate(135deg);}
+	100% { transform:rotate(207deg);}
+}
+.leaf:nth-child(1) { -webkit-animation:show1 5s ease-in-out infinite alternate;}
+.leaf:nth-child(2) { -webkit-animation:show2 5s ease-in-out infinite alternate;}
+.leaf:nth-child(3) { -webkit-animation:show3 5s ease-in-out infinite alternate;}
+.leaf:nth-child(4) { -webkit-animation:show4 5s ease-in-out infinite alternate;}
+
+.leaf:nth-child(6) { -webkit-animation:show6 5s ease-in-out infinite alternate;}
+.leaf:nth-child(7) { -webkit-animation:show7 5s ease-in-out infinite alternate;}
+.leaf:nth-child(8) { -webkit-animation:show8 5s ease-in-out infinite alternate;}
+.leaf:nth-child(9) { -webkit-animation:show9 5s ease-in-out infinite alternate;}
+
+/* 
+使用说明：
+	1.transform-origin:top right;设置元素旋转的基点；
+ */
+
